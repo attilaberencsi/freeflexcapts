@@ -1,6 +1,16 @@
 # Getting Started
 
-Welcome to your new project.
+Based on the reference project template: https://github.com/attilaberencsi/flexing
+
+But the frontend is tried to realize with latest typescript tutorial: https://github.com/SAP-samples/ui5-typescript-tutorial/tree/main
+
+
+## Setup root modules
+
+```sh
+npm install typescript -–save-dev
+npm install @types/node --save-dev
+```
 
 It contains these folders and files, following our recommended project layout:
 
