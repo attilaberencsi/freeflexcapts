@@ -1,22 +1,31 @@
 {
-  "name": "freeflexcapts",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/cds": "^7",
-    "@sap/cds-hana": "^2",
-    "express": "^4"
-  },
-  "devDependencies": {
-    "@cap-js/sqlite": "^1.0.1",
-    "@sap/cds-dk": "^7",
-    "@types/node": "^20.4.1",
-    "typescript": "^5.1.6"
-  },
-  "scripts": {
-    "start": "cds-serve"
-  }
+    "name": "freeflexcapts",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^7",
+        "@sap/cds-hana": "^2",
+        "express": "^4"
+    },
+    "devDependencies": {
+        "@cap-js/sqlite": "^1.0.1",
+        "@sap/cds-dk": "^7",
+        "@types/node": "^20.4.1",
+        "typescript": "^5.1.6",
+        "cds-plugin-ui5": "^0.1.1",
+        "rimraf": "^3.0.2"
+    },
+    "scripts": {
+        "start": "cds-serve",
+        "watch-fioritoolsts": "cds watch --open com.sapdev.favorites.fioritoolsts/index.html?sap-ui-xx-viewCache=false --livereload false",
+        "undeploy": "cf undeploy freeflexcapts --delete-services --delete-service-keys --delete-service-brokers",
+        "build": "rimraf resources mta_archives && mbt build --mtar archive",
+        "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+    },
+    "workspaces": [
+        "app/*"
+    ]
 }

@@ -12,6 +12,20 @@ npm install typescript -–save-dev
 npm install @types/node --save-dev
 ```
 
+## Add SQLite for development
+
+`npm add @cap-js/sqlite -D`
+
+Temporary removed at the end from package.json hana as db so that sqlite works without *--profile* during development
+
+```json,
+  "cds": {
+    "requires": {
+      "db": "hana"
+    }
+  }
+```
+
 It contains these folders and files, following our recommended project layout:
 
 File or Folder | Purpose

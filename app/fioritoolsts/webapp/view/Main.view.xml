@@ -1,0 +1,11 @@
+<mvc:View controllerName="com.sapdev.favorites.fioritoolsts.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Panel id="idFavListPanel" headerText="Favorites">
+		        <macros:Table metaPath="/Links/@com.sap.vocabularies.UI.v1.LineItem" readOnly="true" id="LineItemTable" />
+            </Panel>            
+        </content>
+    </Page>
+</mvc:View>
