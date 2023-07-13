@@ -20,7 +20,9 @@
     },
     "scripts": {
         "start": "cds-serve",
+        "start-ts": "npx cds-ts run --with-mocks --in-memory?",
         "watch-fioritoolsts": "cds watch --open com.sapdev.favorites.fioritoolsts/index.html?sap-ui-xx-viewCache=false --livereload false",
+        "watch-fioritoolstst": "cds-ts watch --open com.sapdev.favorites.fioritoolsts/index.html?sap-ui-xx-viewCache=false --livereload false",
         "undeploy": "cf undeploy freeflexcapts --delete-services --delete-service-keys --delete-service-brokers",
         "build": "rimraf resources mta_archives && mbt build --mtar archive",
         "deploy": "cf deploy mta_archives/archive.mtar --retries 1"

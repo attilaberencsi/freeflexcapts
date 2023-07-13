@@ -1,5 +1,5 @@
-import BaseComponent from "sap/ui/core/UIComponent";
-import { createDeviceModel } from "./model/models";
+import BaseComponent from "sap/fe/core/AppComponent";
+//import { createDeviceModel } from "./model/models";
 
 /**
  * @namespace com.sapdev.favorites.fioritoolsts
@@ -20,9 +20,9 @@ export default class Component extends BaseComponent {
 		super.init();
 
         // enable routing
-        this.getRouter().initialize();
+        // this.getRouter().initialize();
 
         // set the device model
-        this.setModel(createDeviceModel(), "device");
+        //this.setModel(createDeviceModel(), "device");
 	}
 }

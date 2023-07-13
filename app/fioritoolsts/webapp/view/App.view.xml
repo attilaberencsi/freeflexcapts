@@ -1,7 +1,24 @@
-<mvc:View controllerName="com.sapdev.favorites.fioritoolsts.controller.App"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <App id="app">
-    </App>
+<mvc:View
+	id="idAppView"
+	height="100%"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="com.sapdev.favorites.fioritoolsts.controller.App"
+	xmlns:macros="sap.fe.macros"
+>
+	<App id="idMainApp">
+		<pages>
+			<Page
+				id="idMainPage"
+				title="{i18n>title}"
+			>
+				<content>
+					<macros:Table		
+						metaPath="@com.sap.vocabularies.UI.v1.LineItem"
+						id="idLinksTable"
+					/>
+				</content>
+			</Page>
+		</pages>
+	</App>
 </mvc:View>

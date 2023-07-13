@@ -20,7 +20,7 @@
       ]
     },
     {
-      "command": "npx cds-ts run --with-mocks --in-memory?",
+      "command": "npx cds-ts watch --with-mocks --in-memory?",
       "name": "cds-ts run",
       "request": "launch",
       "type": "node-terminal",

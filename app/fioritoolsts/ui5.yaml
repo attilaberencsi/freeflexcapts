@@ -3,15 +3,29 @@ metadata:
   name: com.sapdev.favorites.fioritoolsts
 type: application
 server:
-  customMiddleware:
+  customMiddleware:    
     - name: fiori-tools-appreload
       afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp      
     - name: ui5-tooling-transpile-middleware
       afterMiddleware: compression
       configuration:
         debug: true
         excludePatterns:
-          - /Component-preload.js
+          - /Component-preload.js      
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
+      configuration:
+        component: com.sapdev.favorites.fioritoolsts
+        ui5Theme: sap_horizon
+
 builder:
   customTasks:
     - name: ui5-tooling-transpile-task
