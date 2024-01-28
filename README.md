@@ -2,11 +2,13 @@
 
 Project is genarated as a CAP application with the Application Generator:
 Options
+
 - HANA
 - MTA
 
-After *Fiori:Open Application Generator* Wizard was used to generate a **Basic**  freestyle project based on the Basic CAP service already implemented. 
+After *Fiori:Open Application Generator* Wizard was used to generate a **Basic**  freestyle project based on the Basic CAP service already implemented.
 Options
+
 - Advanced
 - CDS Plugin Usage
 - TypeScript
@@ -31,6 +33,10 @@ Realize with latest UI5 typescript tutorial: https://github.com/SAP-samples/ui5-
 npm install typescript -–save-dev
 npm install @types/node --save-dev
 ```
+
+## Add typescript configuration to tsconfig.json
+
+Check the file and see how You can configure the build folder
 
 ## Add SQLite for development
 
@@ -57,7 +63,6 @@ Fiori Application Generator: Basic Template with TypeScript support
 
 ![](assets/20230711_180407_image.png)
 
-
 It contains these folders and files, following our recommended project layout:
 
 
@@ -71,9 +76,10 @@ It contains these folders and files, following our recommended project layout:
 
 ## Next Steps
 
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
+- Start adding content, for example, a [db/schema.cds](db/schema.cds)
+- Add .ts files in service folder service
+- Open a new terminal and execute `npm run start-ts`, this will launch the CAP service with node-ts without translating it to .js files. This is not recommended for production.
+- To build the service for production, execute `cds build`, this will place the service files into the gen folder, then execute `tsc` to compile the service folder .ts to .js files into the gen folder as well
 
 ## Learn More
 
