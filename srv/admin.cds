@@ -7,5 +7,8 @@ service admin {
     @cds.odata.valuelist
     entity Categories as projection on data.Categories;
 
+    @cds.odata.valuelist
+    entity Tags as projection on data.Tags;
+
     function HiUniblabla(yourName : String(20)) returns String(120);
 }

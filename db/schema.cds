@@ -20,4 +20,9 @@ context data {
 
     }
 
+    entity Tags : managed, cuid {
+        name : String(50) @mandatory;
+        description : String(255);
+    }
+
 }
